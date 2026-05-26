@@ -1,0 +1,49 @@
+jocarsa | oficina
+	/var/www/html/jocarsa-calendario
+	/var/www/html/jocarsa-correo
+	/var/www/html/jocarsa-presentacion
+	/var/www/html/jocarsa-formularios
+	/var/www/html/jocarsa-documentos
+	/var/www/html/jocarsa-videoconferencias
+	/var/www/html/jocarsa-diagrama
+jocarsa | personal
+	/var/www/html/jocarsa-marcadores
+	/var/www/html/jocarsa-agenda
+	/var/www/html/jocarsa-listas
+	/var/www/html/jocarsa-mapamental
+	/var/www/html/jocarsa-fotos
+	/var/www/html/jocarsa-dictado
+	/var/www/html/jocarsa-tableros
+jocarsa | educacion
+	/var/www/html/jocarsa-supervision
+	/var/www/html/jocarsa-horarios
+	/var/www/html/jocarsa-exposiciones
+	/var/www/html/jocarsa-formacion
+	/var/www/html/jocarsa-practicas
+	/var/www/html/jocarsa-scorm
+	/var/www/html/jocarsa-videoconferencias
+	/var/www/html/jocarsa-wiki
+	/var/www/html/jocarsa-foros
+	/var/www/html/jocarsa-espejo
+	/var/www/html/jocarsa-calificaciones
+	/var/www/html/jcoarsa-aula
+jocarsa | marketing
+	/var/www/html/jocarsa-contenido
+	/var/www/html/jocarsa-analitica
+	/var/www/html/jocarsa-wiki
+	/var/www/html/jocarsa-folletos
+	/var/www/html/jocarsa-embudos
+jocarsa | empresa
+	/var/www/html/jocarsa-facturacion
+	/var/www/html/jocarsa-ventas
+jocarsa | IT
+	/var/www/html/jocarsa-documentacion
+	/var/www/html/jocarsa-despliegue
+	/var/www/html/jocarsa-centinela
+	/var/www/html/jocarsa-vigia
+jocarsa | personas
+	/var/www/html/jocarsa-personas
+	/var/www/html/jocarsa-seleccion	
+	/var/www/html/jocarsa-curriculum
+jocarsa | Utilidades
+	/var/www/html/jocarsa-iu
