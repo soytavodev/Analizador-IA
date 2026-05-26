@@ -224,15 +224,23 @@ RESPONDE SÓLO CON JSON.
     elif tipo_generacion == "linkedin":
         modelo = OLLAMA_MODEL_BLOG
         prompt = f"""
-Actúa como Copywriter B2B experto en LinkedIn para el sector tecnológico.
-Analiza este proyecto y crea un post atractivo anunciando el desarrollo o lanzamiento de esta herramienta.
+Actúa como un desarrollador de software construyendo un proyecto en público (Build in Public).
+Tu objetivo es escribir un post para LinkedIn compartiendo tu progreso técnico.
 
-CÓDIGO/ESTRUCTURA:
+INFORME TÉCNICO DEL PROYECTO:
 {informe_texto}
+
+REGLAS PARA EL POST:
+1. NO vendas nada. No es un anuncio comercial.
+2. Enfócate en el 'cómo': explica qué problema técnico resolviste (ej: automatizar la documentación con IA local).
+3. Menciona el stack: Python, CLI, consumo de API, LLM local (Qwen3).
+4. Sé humano, admite desafíos (ej: lidiar con el contexto de la IA, manejar archivos locales).
+5. Estructura: Gancho -> Problema -> Solución/Stack -> Lección aprendida -> Llamada a la acción para conectar.
+6. Usa un tono cercano y profesional.
 
 Devuelve JSON válido:
 {{
-    "post": "Contenido del post con emojis y hashtags relevantes..."
+    "post": "Escribe aquí el contenido del post. Usa párrafos cortos, algunos emojis técnicos y hashtags relevantes como #Python #BuildInPublic #AI #DeveloperJourney..."
 }}
 RESPONDE SÓLO CON JSON.
 """
