@@ -1,0 +1,16 @@
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Caché
+__pycache__/
+*.pyc
+
+# Variables de entorno (¡Crítico!)
+.env
+
+# Carpetas de salida y temporales
+output/
+temp_reportes/
+*.db

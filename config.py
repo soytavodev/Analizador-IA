@@ -1,24 +1,20 @@
 import os
+from dotenv import load_dotenv
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# --- RUTA DE LA BASE DE DATOS ---
-DB_PATH = os.path.join(os.path.dirname(BASE_DIR), "productos.db")
-SCHEMA_PATH = os.path.join(BASE_DIR, "database", "schema.sql")
+# Cargar variables de entorno desde el archivo .env
+load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 # --- IA (OLLAMA) ---
-# Usamos un único modelo de 14B parámetros. 
-# Cabe perfectamente en 16GB VRAM y tiene la inteligencia necesaria para ambos roles.
-OLLAMA_MODEL = "qwen3:14b"
-OLLAMA_MODEL_BLOG = "qwen3:14b"
+# Usamos .getenv para intentar coger la variable del .env, si no existe, usa el valor por defecto.
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen2.5-coder:7b")
+OLLAMA_MODEL_BLOG = os.getenv("OLLAMA_MODEL_BLOG", "qwen2.5-coder:7b")
 
-# Ruta de conexión a tu servidor Ollama
-OLLAMA_API_URL = "https://covalently-untasked-daphne.ngrok-free.dev/api/" 
+OLLAMA_API_URL = os.getenv("OLLAMA_API_URL", "http://localhost:11434/api/")
+OLLAMA_USER = os.getenv("OLLAMA_USER", "")
+OLLAMA_PASSWORD = os.getenv("OLLAMA_PASSWORD", "")
 
-# --- CONFIGURACIÓN DEL ESCÁNER ---
-SCRIPT_PROFE_PATH = os.path.join(BASE_DIR, "vendor", "lightgoldenrodyellow.py")
-
-# --- CONFIGURACIÓN DEL SERVIDOR IA LOCAL (TUTOR) ---
-LOCAL_AI_URL = "https://covalently-untasked-daphne.ngrok-free.dev/api/"
-LOCAL_AI_USER = "jocarsa"
-LOCAL_AI_PASSWORD = "jocarsa"
+# --- DIRECTORIOS ---
+OUTPUT_DIR = os.path.join(BASE_DIR, "output")
+os.makedirs(OUTPUT_DIR, exist_ok=True)
