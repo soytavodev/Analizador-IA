@@ -80,6 +80,8 @@ def dividir_texto_en_bloques(texto, max_chars=MAX_CHARS_BLOQUE_MANUAL):
 def analizar_bloque_funcional_profundo(bloque, indice, total):
     prompt = f"""
 Actúa como analista funcional senior de software empresarial.
+DEBES RESPONDER ESTRICTAMENTE EN ESPAÑOL.
+
 Vas a recibir UNA PARTE del código y estructura de un proyecto.
 Tu misión es comprender qué hace el software desde el punto de vista del usuario final.
 
@@ -115,6 +117,8 @@ def consolidar_mapa_funcional(resumenes):
     material = json.dumps(resumenes, ensure_ascii=False, indent=2)
     prompt = f"""
 Actúa como consultor funcional senior.
+DEBES RESPONDER ESTRICTAMENTE EN ESPAÑOL.
+
 Has recibido análisis parciales de un software. Consolídalos en un MAPA FUNCIONAL COMPLETO.
 Elimina duplicados y organiza el propósito real del sistema.
 
@@ -149,6 +153,7 @@ def generar_manual_desde_mapa_funcional(mapa_funcional):
 
     prompt = f"""
 Actúa como redactor técnico profesional. Crea un MANUAL DE USUARIO final en Markdown.
+DEBES ESCRIBIR TODO EL MANUAL ESTRICTAMENTE EN ESPAÑOL.
 Debe ser práctico, detallado y orientado al cliente/usuario final (NO a programadores).
 Prohibido mencionar código, bases de datos o arquitectura.
 
@@ -201,6 +206,8 @@ def analizar_con_ia(informe_texto, tipo_generacion="producto"):
         modelo = OLLAMA_MODEL
         prompt = f"""
 Actúa como Analista de Producto SaaS Experto.
+DEBES RESPONDER ESTRICTAMENTE EN ESPAÑOL.
+
 Analiza este código y genera contenido para una landing page comercial atractiva orientada a ventas.
 
 CÓDIGO/ESTRUCTURA:
@@ -226,6 +233,7 @@ RESPONDE SÓLO CON JSON.
         prompt = f"""
 Actúa como un desarrollador de software construyendo un proyecto en público (Build in Public).
 Tu objetivo es escribir un post para LinkedIn compartiendo tu progreso técnico.
+DEBES RESPONDER ESTRICTAMENTE EN ESPAÑOL.
 
 INFORME TÉCNICO DEL PROYECTO:
 {informe_texto}
@@ -248,6 +256,8 @@ RESPONDE SÓLO CON JSON.
         modelo = OLLAMA_MODEL_BLOG
         prompt = f"""
 Actúa como Tech Blogger Senior.
+DEBES RESPONDER ESTRICTAMENTE EN ESPAÑOL.
+
 Escribe un artículo técnico sobre cómo se ha construido este proyecto, qué problema resuelve y cómo está estructurado.
 
 CÓDIGO/ESTRUCTURA:
